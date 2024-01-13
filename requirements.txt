@@ -1,0 +1,4 @@
+Pillow==8.0.1
+tkinter
+
+
