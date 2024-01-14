@@ -101,9 +101,14 @@ class OrphCrypt:
         return result
 
     def show_notice_popup(self):
-        messagebox.showinfo("Important Notice", "Disclaimer: "
-                           "Please Don't Copy This Code:)")
-
+        notice_text = (
+        "Disclaimer: Please Don't Copy This Code:)\n\n"
+        "Instead of copying, fork my repository."
+    )
+        messagebox.showinfo("Important Notice", notice_text)
+        # Adding a navigational link
+        navigational_link = "For more information on forking, visit [GitHub Forking Documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#about-forks)"
+        messagebox.showinfo("Fork", navigational_link)
     
     def show_about_page(self):
         
