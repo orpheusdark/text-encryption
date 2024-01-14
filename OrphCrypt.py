@@ -39,6 +39,17 @@ class OrphCrypt:
         self.shift_entry.bind("<FocusOut>", self.on_shift_entry_focus_out)
         self.shift_entry.place(relx=0.5, rely=0.3, anchor="n")
 
+        # Encrypt Button
+        encrypt_button = tk.Button(root, text="Encrypt", font=("Happy Monkey", 14), command=self.encrypt)
+        encrypt_button.place(relx=0.5, rely=0.4, anchor="n")
+
+        # Decrypt Button
+        decrypt_button = tk.Button(root, text="Decrypt", font=("Happy Monkey", 14), command=self.decrypt)
+        decrypt_button.place(relx=0.5, rely=0.5, anchor="n")
+
+         # About Author Page
+        about_page_button = tk.Button(root, text="About Author", font=("Happy Monkey", 16),command=self.show_about_page)
+        about_page_button.place(relx=0.5, rely=0.8, anchor="n")
 
     def on_message_entry_focus_in(self, event):
         if self.message_entry.get() == "Enter Message":
@@ -56,19 +67,7 @@ class OrphCrypt:
         if not self.shift_entry.get():
             self.shift_entry.insert(0, "Shift")
 
-        # Encrypt Button
-        encrypt_button = tk.Button(root, text="Encrypt", font=("Happy Monkey", 14), command=self.encrypt)
-        encrypt_button.place(relx=0.5, rely=0.4, anchor="n")
-
-        # Decrypt Button
-        decrypt_button = tk.Button(root, text="Decrypt", font=("Happy Monkey", 14), command=self.decrypt)
-        decrypt_button.place(relx=0.5, rely=0.5, anchor="n")
-
-         # About Author Page
-        about_page_button = tk.Button(root, text="About Author", font=("Happy Monkey", 16),command=self.show_about_page)
-        about_page_button.place(relx=0.5, rely=0.8, anchor="n")
-
-    def encrypt(self):
+   def encrypt(self):
         message = self.message_entry.get()
         shift = int(self.shift_entry.get())
         encrypted_message = self.caesar_cipher(message, shift)
