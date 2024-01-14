@@ -39,6 +39,10 @@ class OrphCrypt:
         self.shift_entry.bind("<FocusOut>", self.on_shift_entry_focus_out)
         self.shift_entry.place(relx=0.5, rely=0.3, anchor="n")
 
+
+    
+
+
         # Encrypt Button
         encrypt_button = tk.Button(root, text="Encrypt", font=("Happy Monkey", 14), command=self.encrypt)
         encrypt_button.place(relx=0.5, rely=0.4, anchor="n")
@@ -50,6 +54,7 @@ class OrphCrypt:
          # About Author Page
         about_page_button = tk.Button(root, text="About Author", font=("Happy Monkey", 16),command=self.show_about_page)
         about_page_button.place(relx=0.5, rely=0.8, anchor="n")
+
 
     def on_message_entry_focus_in(self, event):
         if self.message_entry.get() == "Enter Message":
@@ -91,14 +96,13 @@ class OrphCrypt:
             if char.isalpha():
                 ascii_offset = ord('a') if char.islower() else ord('A')
                 result += chr((ord(char) - ascii_offset + shift) % 26 + ascii_offset)
-            else:
+        else:
                 result += char
         return result
 
     def show_notice_popup(self):
         messagebox.showinfo("Important Notice", "Disclaimer: "
-                            "Lets Connect"
-                                               "  And Please Don't Copy This Code:)")
+                           " And Please Don't Copy This Code:)")
 
     
     def show_about_page(self):
@@ -110,6 +114,14 @@ class OrphCrypt:
         about_label = tk.Label(about_window, text="Connect And Collaborate", font=("Happy Monkey", 14), pady=10)
         about_label.pack()
 
+        
+        about_label = tk.Label(about_window, text="Nirant Chavda\n\nGreetings!\n\nContact Information:\n", font=("Happy Monkey", 14), pady=10)
+        about_label.pack()
+
+        mailme_button = tk.Button(about_window, text="Email Me", font=("Happy Monkey", 14), command=self.send_email)
+        mailme_button.pack(pady=10)
+
+        
         linkedin_img = tk.PhotoImage(file="linkedin.png")
         linkedin_button = tk.Button(about_window, image=linkedin_img, command=self.open_linkedin)
         linkedin_button.image = linkedin_img
@@ -119,6 +131,10 @@ class OrphCrypt:
         github_button = tk.Button(about_window, image=github_img, command=self.open_github)
         github_button.image = github_img
         github_button.pack(pady=5)
+
+    def send_email(self):
+         import webbrowser
+         webbrowser.open("mailto:orpheusdark@duck.com")    
 
     def open_linkedin(self):
         import webbrowser
