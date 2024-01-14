@@ -28,7 +28,7 @@ OrphCrypt is a simple encryption and decryption tool built using Python and Tkin
 To run the application, execute the following command in your terminal:
 
 ```bash
-python your_script_name.py
+python OrphCrypt.py
 ```
 
 ## Dependencies
