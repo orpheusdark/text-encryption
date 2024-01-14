@@ -1,8 +1,6 @@
 ![orpheusdark](https://github.com/orpheusdark/PRODIGY_CS_01/assets/117748842/8293cf72-f3fc-4ff7-87b6-b1111792f301)
 
-# PRODIGY_CS_01
-
-## OrphCrypt - Encryption Decryption Tool
+# OrphCrypt - Encryption Decryption Tool
 
 OrphCrypt is a simple encryption and decryption tool built using Python and Tkinter.
 
@@ -47,7 +45,7 @@ Install dependencies using:
 pip install tk pillow
 ```
 
-
+# Connect
 [![LinkedIn Logo](https://github.com/orpheusdark/PRODIGY_CS_01/assets/117748842/39f1c509-d0fd-4d3a-b7f9-8f09bae1bf07)](https://www.linkedin.com/in/orpheusdark/)
 
 
