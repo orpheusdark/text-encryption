@@ -67,7 +67,7 @@ class OrphCrypt:
         if not self.shift_entry.get():
             self.shift_entry.insert(0, "Shift")
 
-   def encrypt(self):
+    def encrypt(self):
         message = self.message_entry.get()
         shift = int(self.shift_entry.get())
         encrypted_message = self.caesar_cipher(message, shift)
