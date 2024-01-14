@@ -103,12 +103,36 @@ class OrphCrypt:
     def show_notice_popup(self):
         notice_text = (
         "Disclaimer: Please Don't Copy This Code:)\n\n"
-        "Instead of copying, fork my repository."
+        "Instead of copying, FORK my repository."
     )
+        # Display the initial message
         messagebox.showinfo("Important Notice", notice_text)
-        # Adding a navigational link
-        navigational_link = "For more information on forking, visit [GitHub Forking Documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#about-forks)"
-        messagebox.showinfo("Fork", navigational_link)
+
+        # Create a custom dialog with a clickable link
+        self.show_link_dialog()
+
+    def show_link_dialog(self):
+        link_dialog = tk.Toplevel(self.root)
+        link_dialog.title("Fork a repository")
+
+        link_label = tk.Label(
+            link_dialog,
+            text="For more information on forking, visit [GitHub Forking Documentation]",
+            font=("Happy Monkey", 14),
+            justify="center",
+            padx=50,
+            pady=10,
+            cursor="hand2"
+        )
+        link_label.pack()
+
+        # Make the label behave like a link
+        link_label.bind("<Button-1>", lambda event: self.open_browser("https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#about-forks"))
+
+    def open_browser(self, url):
+        import webbrowser
+        webbrowser.open_new(url)
+        
     
     def show_about_page(self):
         
