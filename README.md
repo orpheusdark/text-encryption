@@ -48,5 +48,6 @@ pip install tk pillow
 ```
 
 
-![linkedin](https://github.com/orpheusdark/PRODIGY_CS_01/assets/117748842/39f1c509-d0fd-4d3a-b7f9-8f09bae1bf07)](www.linkedin.com/in/orpheusdark)
+[![LinkedIn Logo](https://github.com/orpheusdark/PRODIGY_CS_01/assets/117748842/39f1c509-d0fd-4d3a-b7f9-8f09bae1bf07)](https://www.linkedin.com/in/orpheusdark/)
+
 
