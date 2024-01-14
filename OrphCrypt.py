@@ -102,7 +102,7 @@ class OrphCrypt:
 
     def show_notice_popup(self):
         messagebox.showinfo("Important Notice", "Disclaimer: "
-                           " And Please Don't Copy This Code:)")
+                           "Please Don't Copy This Code:)")
 
     
     def show_about_page(self):
