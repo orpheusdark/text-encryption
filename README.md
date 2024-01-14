@@ -16,20 +16,36 @@ OrphCrypt is a simple encryption and decryption tool built using Python and Tkin
 
 ## How to Use
 
-1. Clone the repository:
+Clone the repository:
 
-   ```bash
-   git clone https://github.com/your-username/PRODIGY_CS_01.git
-   cd PRODIGY_CS_01
-  
+  ```bash
+  git clone https://github.com/orpheusdark/PRODIGY_CS_01.git
+  cd PRODIGY_CS_01
+  ```  
+
+## Dependencies
+
+Make sure to install the following dependencies before running the application:
+
+- [Python](https://www.python.org/) (version 3.12)
+- [Tkinter](https://docs.python.org/3/library/tkinter.html)
+- [Pillow](https://pillow.readthedocs.io/en/stable/)
+
+Install dependencies using:
+
+```bash
+pip install tk pillow
+```
+
+
 
 ## Run the Application
 
 To run the application, execute the following command in your terminal:
 
-```bash
-python OrphCrypt.py
-```
+  ```bash
+  python OrphCrypt.py
+  ```
 
 ## Dependencies
 
