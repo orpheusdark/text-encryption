@@ -2,7 +2,7 @@
 
 # OrphCrypt - Encryption Decryption Tool
 
-OrphCrypt is a simple encryption and decryption tool built using Python and Tkinter.
+OrphCrypt is a simple and basic encryption and decryption tool built using Python and Tkinter.
 
 ## Features
 
