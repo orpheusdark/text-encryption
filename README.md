@@ -47,6 +47,7 @@ To run the application, execute the following command in your terminal:
 
 ![mianpage_oc](https://github.com/orpheusdark/PRODIGY_CS_01/assets/117748842/09f8d611-73fd-4630-a769-e5765d9647ed)
 ![result_oc](https://github.com/orpheusdark/PRODIGY_CS_01/assets/117748842/f1030307-e644-4bd3-97f6-3eaa84a72307)
+![Screenshot 2024-01-14 070921](https://github.com/orpheusdark/PRODIGY_CS_01/assets/117748842/f4be6c36-9585-4ff1-861b-b1d1628cfccf)
 
 
 # Connect
