@@ -21,20 +21,40 @@ class OrphCrypt:
         self.canvas.create_image(0, 0, anchor=tk.NW, image=self.background_image)
         self.font_style = ("Happy Monkey", 14)
         
-
-
-        
         # Title
         title_label = tk.Label(root, text="OrphCrypt", font=("Happy Monkey", 20), bd=6)
         title_label.place(relx=0.5, rely=0.1, anchor="n")
 
         # Message Entry
         self.message_entry = tk.Entry(root, font=("Happy Monkey", 16), bd=5)
+        self.message_entry.insert(0, "Enter Message")
+        self.message_entry.bind("<FocusIn>", self.on_message_entry_focus_in)
+        self.message_entry.bind("<FocusOut>", self.on_message_entry_focus_out)
         self.message_entry.place(relx=0.5, rely=0.2, anchor="n")
 
         # Shift Entry
         self.shift_entry = tk.Entry(root, font=("Happy Monkey", 16), bd=5)
+        self.shift_entry.insert(0, "Shift")
+        self.shift_entry.bind("<FocusIn>", self.on_shift_entry_focus_in)
+        self.shift_entry.bind("<FocusOut>", self.on_shift_entry_focus_out)
         self.shift_entry.place(relx=0.5, rely=0.3, anchor="n")
+
+
+    def on_message_entry_focus_in(self, event):
+        if self.message_entry.get() == "Enter Message":
+            self.message_entry.delete(0, tk.END)
+
+    def on_message_entry_focus_out(self, event):
+        if not self.message_entry.get():
+            self.message_entry.insert(0, "Enter Message")
+
+    def on_shift_entry_focus_in(self, event):
+        if self.shift_entry.get() == "Shift":
+            self.shift_entry.delete(0, tk.END)
+
+    def on_shift_entry_focus_out(self, event):
+        if not self.shift_entry.get():
+            self.shift_entry.insert(0, "Shift")
 
         # Encrypt Button
         encrypt_button = tk.Button(root, text="Encrypt", font=("Happy Monkey", 14), command=self.encrypt)
