@@ -31,7 +31,7 @@ Make sure to install the following dependencies before running the application:
 Install dependencies using:
 
 ```bash
-pip install tk pillow
+pip install -r requirements.txt
 ```
 
 
